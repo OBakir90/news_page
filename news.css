@@ -1,0 +1,64 @@
+.bg_darker {
+    background-color: #2b4a4a;
+    color: #dae4e5;
+}
+
+.bg_dark {
+    background-color: #296e6b;
+    color: #dae4e5;
+}
+
+.bg_light {
+    background-color: #69a4a2;
+}
+
+.bg_lighter {
+    background-color: #94c0c2;
+    color: #2b4a4a;
+}
+
+.bg_basic {
+    background-color: #dae4e5;
+}
+
+.no_mar_pad {
+    margin: 0;
+    padding: 0;
+}
+
+.flex_row {
+    display: flex;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.ul_style {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1rem;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.temp {
+    font-size: 2rem;
+    color: #94c0c2;
+}
+
+.font_bolder {
+    font-weight: bolder;
+}
