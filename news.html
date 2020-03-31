@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <link rel="stylesheet" href="news.css" />
     <title>NEWS</title>
 </head>
@@ -15,8 +15,23 @@
             <div class="logo">
                 <img src="logo.jpg" alt="logo" style="width: 80px; height: 80px;" />
             </div>
-            <div class="photo_gallery font_bolder ">PHOTO GALLERY</div>
-            <div class="video_gallery font_bolder ">VIDEO GALLERY</div>
+
+            <div class="header_mid">
+                <div class="header_mid_top flex_row">
+                    <div class="date" id="date">Date</div>
+                    <div class="time" id="time">TIME</div>
+                </div>
+                <div class="header_mid_bottom flex_row">
+                    <div class="galleries flex_row">
+                        <div class="photo_gallery font_bolder ">PHOTO GALLERY</div>
+                        <div class="video_gallery font_bolder ">VIDEO GALLERY</div>
+                    </div>
+                    <div class="sign_in">
+                        <button id="sign_in">Sign In</button>
+                    </div>
+                </div>
+
+            </div>
             <div class="weather">
                 <h3 class="city_name no_mar_pad">Mcr</h3>
                 <p class="temp no_mar_pad">C</p>
@@ -26,16 +41,17 @@
             <div class="nav"></div>
             <div class="subjects">
                 <ul class="subjects_list ul_style">
-                    <li class="Home font_bolder ">Home</li>
-                    <li>UK</li>
-                    <li>World</li>
-                    <li>Business</li>
-                    <li>Politics</li>
-                    <li>Tech</li>
-                    <li>Science</li>
-                    <li>Health</li>
-                    <li>Education</li>
-                    <li>Entertainment</li>
+                    <li class="Home font_bolder "><a href="">Home</a></li>
+                    <li><a href="#">UK</a></li>
+                    <li><a href="#">World</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Politics</a></li>
+                    <li><a href="#">Tech</a></li>
+                    <li><a href="#">Science</a></li>
+                    <li><a href="#">Health</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Entertainment</a></li>
+                    <li><button id="toggle"><a href=""><i class="fa fa-bars"></i></a></button></li>
                 </ul>
             </div>
         </section>
@@ -49,7 +65,6 @@
                     <li class="NZD">NZD</li>
                 </ul>
             </div>
-            <div class="time">TIME</div>
         </section>
         <section class="prominents">
             <div></div>

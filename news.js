@@ -1,3 +1,12 @@
+//DYNAMIC NAV-BAR
+const toggle = document.getElementById('toggle');
+var items = document.querySelector(".subjects");
+console.log(items)
+toggle.addEventListener('click', () =>
+    items.className === "subjects" ? items.classList.add("show") : items.className = "subjects")
+
+
+
 // WEATHER
 function weather() {
     fetch(
@@ -18,6 +27,35 @@ weather();
 
 //TIME
 
+const time = document.getElementById("time"),
+    date = document.getElementById("date");
+
+
+function renderTime() {
+    let moment = new Date();
+
+    let day = moment.getDate(),
+        month = moment.getMonth(),
+        year = moment.getFullYear(),
+        hour = moment.getHours(),
+        min = moment.getMinutes(),
+        seconds = moment.getSeconds();
+
+    const AmPm = hour >= 12 ? "PM" : "AM";
+    hour % 12 || 12;
+
+    date.innerHTML = `${day}-${month+1}-${year}`
+    time.innerHTML = `${addZero(hour)}:${addZero(min)}:${addZero(seconds)}`;
+
+    setTimeout(renderTime, 1000);
+}
+
+function addZero(number) {
+    return (parseInt(number, 10) < 10 ? "0" : "") + number;
+}
+
+renderTime();
+
 //EXCHANGE
 
 function exchange() {
@@ -35,8 +73,7 @@ function displayResult(dataAll) {
     let USD = document.querySelector(`.USD`);
     USD.innerText = (1 / dataAll.rates.GBP).toFixed(2) + ` USD`;
     let EURO = document.querySelector(`.EURO`);
-
-    EURO.innerText = dataAll.rates.GBP * dataAll.rates.EURO;
+    EURO.innerText = (1 / (dataAll.rates.GBP * dataAll.rates.EURO)).toFixed(2);
     let JPY = document.querySelector(`.JPY`);
     let RUB = document.querySelector(`.RUB`);
     let NZD = document.querySelector(`.NZD`);
