@@ -44,7 +44,7 @@ function renderTime() {
     const AmPm = hour >= 12 ? "PM" : "AM";
     hour % 12 || 12;
 
-    date.innerHTML = `${day}-${month+1}-${year}`
+    date.innerHTML = `${addZero(day)}-${addZero(month+1)}-${year}`
     time.innerHTML = `${addZero(hour)}:${addZero(min)}:${addZero(seconds)}`;
 
     setTimeout(renderTime, 1000);
@@ -73,10 +73,14 @@ function displayResult(dataAll) {
     let USD = document.querySelector(`.USD`);
     USD.innerText = (1 / dataAll.rates.GBP).toFixed(2) + ` USD`;
     let EURO = document.querySelector(`.EURO`);
-    EURO.innerText = (1 / (dataAll.rates.GBP * dataAll.rates.EURO)).toFixed(2);
+    EURO.innerText = ((dataAll.rates.EUR / dataAll.rates.GBP)).toFixed(2) + `EURO`;
     let JPY = document.querySelector(`.JPY`);
+    JPY.innerText = ((dataAll.rates.JPY / dataAll.rates.GBP)).toFixed(2) + `JPY`;
     let RUB = document.querySelector(`.RUB`);
+    RUB.innerText = ((dataAll.rates.RUB / dataAll.rates.GBP)).toFixed(2) + `RUB`;
     let NZD = document.querySelector(`.NZD`);
+    NZD.innerText = ((dataAll.rates.NZD / dataAll.rates.GBP)).toFixed(2) + `NZD`;
+
 }
 
 exchange();

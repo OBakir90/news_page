@@ -100,12 +100,6 @@ body {
     display: none;
 }
 
-.show {
-    display: flex;
-    flex-direction: column;
-    background-color: red;
-}
-
 .temp {
     font-size: 2rem;
     color: #94c0c2;
@@ -120,6 +114,11 @@ body {
 @media screen and (max-width: 700px) {
     .subjects_list li:not(:last-child) {
         display: none;
+    }
+    .show {
+        display: flex;
+        flex-direction: column;
+        background-color: red;
     }
     #toggle {
         display: flex;
