@@ -45,6 +45,7 @@ function renderTime() {
     hour % 12 || 12;
 
     date.innerHTML = `${addZero(day)}-${addZero(month+1)}-${year}`
+
     time.innerHTML = `${addZero(hour)}:${addZero(min)}:${addZero(seconds)}`;
 
     setTimeout(renderTime, 1000);
@@ -80,7 +81,6 @@ function displayResult(dataAll) {
     RUB.innerText = ((dataAll.rates.RUB / dataAll.rates.GBP)).toFixed(2) + `RUB`;
     let NZD = document.querySelector(`.NZD`);
     NZD.innerText = ((dataAll.rates.NZD / dataAll.rates.GBP)).toFixed(2) + `NZD`;
-
 }
 
 exchange();
